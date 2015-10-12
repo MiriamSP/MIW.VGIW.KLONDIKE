@@ -10,12 +10,12 @@ public class MoveFromStairToStairView {
 
     public void render() {
         int origStraight;
-        origStraight = new LimitedIntDialog("De qué escalera [1-7]", 1, 7).read();
+        origStraight = new LimitedIntDialog("De qué escalera [1-7]? ", 1, 7).read();
         int numCards;
         numCards = new LimitedIntDialog("Cuantas cartas? ", 1, 11).read();
         int destStraight;
-        destStraight = new LimitedIntDialog("A qué escalera [1-7]", 1, 7).read();
-        boolean result = moveFromStairToStairController.moveFromStairToStair(origStraight, destStraight,numCards);
+        destStraight = new LimitedIntDialog("A qué escalera [1-7]? ", 1, 7).read();
+        boolean result = moveFromStairToStairController.moveFromStairToStair(origStraight, destStraight, numCards);
         if (!result) {
             new IO().writeln("ERROR!!!! Movimiento incorrecto");
         } else {
@@ -25,6 +25,5 @@ public class MoveFromStairToStairView {
                 moveFromStairToStairController.close();
             }
         }
-
     }
 }

@@ -10,7 +10,7 @@ public class MoveFromStairToSuitView {
 
     public void render() {
         int stair;
-        stair = new LimitedIntDialog("De qué escalera [1-7]", 1, 7).read();
+        stair = new LimitedIntDialog("De qué escalera? ", 1, 7).read();
         boolean result = moveFromStairToSuitController.moveFromStairToSuitController(stair);
         if (!result) {
             new IO().writeln("ERROR!!!! Movimiento incorrecto");

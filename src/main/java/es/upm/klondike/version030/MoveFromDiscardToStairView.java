@@ -10,7 +10,7 @@ public class MoveFromDiscardToStairView {
 
     public void render() {
         int numStair;
-        numStair = new LimitedIntDialog("A qué escalera",1,7).read();
+        numStair = new LimitedIntDialog("A qué escalera? ",1,7).read();
         boolean result = moveFromDiscardToStairController.move(numStair);       
         if(!result){
             new IO().writeln("ERROR!!!! Movimiento incorrecto");
@@ -23,5 +23,4 @@ public class MoveFromDiscardToStairView {
             }
         }
     }
-
 }

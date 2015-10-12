@@ -10,5 +10,4 @@ public class MoveFromDiscardToSuitView {
     public void render() {
         moveFromDiscardToSuitController.move();
     }
-
 }
