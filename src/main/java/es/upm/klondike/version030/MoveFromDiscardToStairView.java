@@ -13,10 +13,10 @@ public class MoveFromDiscardToStairView {
         numStair = new LimitedIntDialog("A qué escalera",1,7).read();
         boolean result = moveFromDiscardToStairController.move(numStair);       
         if(!result){
-            new IO().writeln("ERROR!!!! No se puede realizar ese movimiento");
+            new IO().writeln("ERROR!!!! Movimiento incorrecto");
         }else{
             if(moveFromDiscardToStairController.getBoard().isFinished()){
-                new IO().writeln("ENHORABUENA!!!! HA GANADO!!!");
+                new IO().writeln("WIN WIN!!!! ");
             }
             else{
                 moveFromDiscardToStairController.close();

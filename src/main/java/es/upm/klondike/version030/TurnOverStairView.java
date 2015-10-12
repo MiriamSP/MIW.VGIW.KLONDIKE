@@ -16,7 +16,7 @@ public class TurnOverStairView {
             new IO().writeln("ERROR!!!! No se puede voltear una carta descubierta");
         } else {
             if (turnOverStairController.getBoard().isFinished()) {
-                new IO().writeln("ENHORABUENA!!!! HA GANADO!!!");
+                new IO().writeln("WIN WIN!!!");
             } else {
                 turnOverStairController.close();
             }
